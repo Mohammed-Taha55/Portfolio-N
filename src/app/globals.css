@@ -1,0 +1,194 @@
+@import "tailwindcss";
+
+/* Wide breakpoint: Rachel-style 1200px content well. Tailwind v4
+   custom variant - use as `wd:grid-cols-2` etc. PageShell caps the
+   well at 1200px; below that everything stacks single-column. */
+@custom-variant wd (@media (min-width: 1200px));
+
+/* Light-only site: `dark:` utilities fire solely from an explicit
+   `.dark` ancestor - never from the OS prefers-color-scheme media
+   query. Even on a system-wide dark setting the UI stays light. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-brawler: var(--font-brawler);
+  --font-mono: var(--font-geist-mono);
+}
+
+@theme {
+  /* The page paper. Every surface that sits "on the page" uses it. */
+  --color-paper: #fafcfd;
+
+  /* Motion tokens (Emil Kowalski's curves). Never the CSS keywords:
+     `ease` and `ease-in-out` are too weak to feel intentional.
+     out    - anything entering, exiting or answering a hover
+     in-out - something already on screen moving to a new place */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+
+  /* Elevation without borders (Jakub Krehel's three-layer ring):
+     1px ring, short lift, soft ambient depth. */
+  --shadow-ring:
+    0 0 0 1px oklch(0 0 0 / 0.06), 0 1px 2px -1px oklch(0 0 0 / 0.06),
+    0 2px 4px 0 oklch(0 0 0 / 0.04);
+  --shadow-float:
+    0 0 0 1px oklch(0 0 0 / 0.06), 0 2px 4px -2px oklch(0 0 0 / 0.08),
+    0 12px 28px -8px oklch(0.2 0.02 250 / 0.18);
+}
+
+@layer base {
+  /* no visible scrollbar anywhere - scrolling still works.
+     with no scrollbar track there is no layout shift between
+     short pages (no overflow) and long pages (overflow). */
+  html {
+    color-scheme: light;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    /* anchored jumps (#work) land below the floating dock;
+       smooth gliding for those is done in JS (RouteScroll) so route
+       changes always snap instantly instead of animating */
+    scroll-padding-top: 6rem;
+  }
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+  * {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  *::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  body {
+    @apply bg-paper font-sans text-neutral-900 antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    @apply bg-blue-500 text-white;
+  }
+
+  /* type scale - Geist everywhere by default.
+     only the hero headline opts into Brawler via .font-brawler */
+  h1 {
+    font-family: var(--font-geist-sans), system-ui, sans-serif;
+    letter-spacing: -0.03em;
+    font-size: 2.75rem;
+    line-height: 1.1;
+    font-weight: 600;
+  }
+  @media (min-width: 1200px) {
+    h1 {
+      font-size: 3.5rem;
+    }
+  }
+  h3 {
+    font-family: var(--font-geist-sans), system-ui, sans-serif;
+    letter-spacing: -0.02em;
+    font-size: 1.325rem;
+    font-weight: 600;
+  }
+}
+
+/* First-paint entrance (FadeIn). Hidden state lives only in the `from`
+   keyframe with fill `both`, so if the animation never runs the content
+   is simply visible. Stagger with --enter-delay.
+   Starts at opacity 0.01, never 0: Chrome's paint timing ignores
+   anything painted fully transparent, and an opacity animation runs on
+   the compositor without repainting - so content that enters from 0
+   never registers a First/Largest Contentful Paint at all. 0.01 is
+   invisible to the eye and visible to the metric. */
+@keyframes enter {
+  from {
+    opacity: 0.01;
+    translate: 0 12px;
+    filter: blur(4px);
+  }
+}
+@keyframes enter-fade {
+  from {
+    opacity: 0.01;
+  }
+}
+.enter {
+  animation: enter 300ms var(--ease-out) both;
+  animation-delay: var(--enter-delay, 0s);
+}
+/* Images skip the blur: filtering a large bitmap for 300ms costs more
+   than it adds. */
+.enter-media {
+  animation: enter-media 400ms var(--ease-out) both;
+  animation-delay: var(--enter-delay, 0s);
+}
+@keyframes enter-media {
+  from {
+    opacity: 0.01;
+    translate: 0 16px;
+  }
+}
+
+/* dock: drops in once per document (it stays mounted across routes) */
+@keyframes dock-in {
+  from {
+    opacity: 0.01;
+    translate: 0 -16px;
+  }
+}
+.dock-in {
+  animation: dock-in 250ms var(--ease-drawer) both;
+}
+
+/* tab content enter, transform + opacity only, interruptible by design */
+@keyframes tab-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-tab-in {
+  animation: tab-in 200ms var(--ease-out);
+}
+
+/* A phone cut from a design export keeps the export's grey in its four
+   corners; this clips it to the device's own radius. Measured on the
+   fintech-home phones: 95px on a 1720 x 3728 phone, so 5.52% of the
+   width and 2.55% of the height, rounded up a touch so no grey survives
+   the anti-aliasing. Percentages keep it right at every rendered size. */
+.phone-clip {
+  border-radius: 5.8% / 2.68%;
+}
+
+/* Unfilled case-study fields. Only rendered in development, never in a
+   production build, so a forgotten TODO can't ship to recruiters. */
+.todo {
+  @apply rounded-md border border-dashed border-amber-500 bg-amber-50 px-1.5 font-mono text-[12px] text-amber-800;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  /* Reduced motion means no movement, not no feedback: entrances keep a
+     short opacity fade (opacity causes no vestibular trouble). */
+  .enter,
+  .enter-media,
+  .dock-in {
+    animation-name: enter-fade !important;
+    animation-duration: 200ms !important;
+  }
+}
