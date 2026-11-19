@@ -98,7 +98,7 @@ export const WORK: CaseStudy[] = [
     summary:
       "NOVA is a concept iOS assistant you talk to. I designed the onboarding and the core loop around one job: proving what it heard before it acts.",
     poster: {
-      image: "nova/poster",
+      image: "nova/cover",
       alt: "NOVA brand poster: a glowing pink quatrefoil mark with a white sound waveform inside it, and the NOVA wordmark below, on a soft pink gradient.",
     },
     facts: facts(),
@@ -128,7 +128,7 @@ export const WORK: CaseStudy[] = [
     summary:
       "My first fintech brief: a money app's home screen rebuilt around one action, Add money, after a reviewer's seven notes. Submitted, not approved.",
     poster: {
-      image: "fintech-home/poster",
+      image: "fintech-home/cover",
       alt: "Three stages of a fintech app's home screen on a sky-blue background, ending with a white balance card, a black Add money button and a two-by-two grid of currency tiles. The client's logo is blurred.",
     },
     facts: facts(),
@@ -163,7 +163,7 @@ export const WORK: CaseStudy[] = [
     summary:
       "Umami is open-source, cookie-free web analytics. I redesigned its landing page to put the real dashboard up front and cut every section down to one idea.",
     poster: {
-      image: "umami/poster",
+      image: "umami/cover",
       alt: "Umami brand poster: the black and white circular Umami mark beside the umami wordmark, on a vivid blue cloud gradient.",
     },
     facts: facts(),
@@ -259,7 +259,7 @@ export const WORK: CaseStudy[] = [
     summary:
       "Nuvex is a crypto portfolio tracker I designed from scratch. The dashboard answers three questions in order: what my holdings are worth, what’s moving, and what just happened.",
     poster: {
-      image: "nuvex/poster",
+      image: "nuvex/cover",
       alt: "Nuvex poster: the dark crypto portfolio dashboard floating on a pale blue cloud gradient, showing total portfolio value, 24-hour change, total earnings and a purple performance chart.",
     },
     facts: facts(),
@@ -308,7 +308,7 @@ export const WORK: CaseStudy[] = [
     summary:
       "See.io turns a sentence into a live website. I redesigned its landing page so the first thing you see is the thing you do: type your idea.",
     poster: {
-      image: "see-io/poster",
+      image: "see-io/cover",
       alt: "See.io poster: the headline Turn an idea into a live website, with live website in purple, above a prompt box reading A menu and hours for my ramen bar and three example chips, on a dark purple-hazed background.",
     },
     facts: facts(),
@@ -398,7 +398,7 @@ export const WORK: CaseStudy[] = [
     summary:
       "Novq is an original landing page I designed for a platform where AI agents research, decide and execute work for a team. One illustration style carries the whole page.",
     poster: {
-      image: "novq/poster",
+      image: "novq/cover",
       alt: "Novq brand poster: the blue rounded-square N mark beside the NOVQ wordmark, over faint grey isometric line art.",
     },
     facts: facts(),
@@ -475,7 +475,7 @@ export const WORK: CaseStudy[] = [
     summary:
       "Opsec is a blockchain analytics dashboard I designed. The overview brings value locked, active wallets, volume and transactions across networks into one calm, light screen.",
     poster: {
-      image: "opsec/poster",
+      image: "opsec/cover",
       alt: "Opsec poster: the light blockchain analytics dashboard floating on a coral cloud gradient, showing total value locked, daily active wallets and an on-chain activity chart.",
     },
     facts: facts(),
@@ -524,7 +524,7 @@ export const WORK: CaseStudy[] = [
     summary:
       "takeUforward helps engineers prepare for tech interviews with DSA, core CS and system design. I redesigned its landing page to lead with the real product and a clear path.",
     poster: {
-      image: "takeuforward/poster",
+      image: "takeuforward/cover",
       alt: "takeUforward brand poster: the white arrow mark beside the takeUforward wordmark with a blue U, on black with a soft blue glow.",
     },
     facts: facts(),
@@ -620,7 +620,7 @@ export const WORK: CaseStudy[] = [
     summary:
       "RunGTM finds buyers from intent signals and runs outreach across LinkedIn, X and email. I designed the overview to show what’s working and what needs you today.",
     poster: {
-      image: "rungtm/poster",
+      image: "rungtm/cover",
       alt: "RunGTM poster: the outbound dashboard floating on a lavender cloud gradient, showing buyers found, contracted and replies above a lead conversion funnel.",
     },
     facts: facts(),

@@ -60,7 +60,7 @@ export const metadata: Metadata = pageMeta(
   "/work/nova",
   `NOVA: designing trust for a voice assistant that acts on your phone · ${SITE_NAME}`,
   {
-    url: "/img/nova/og.jpg",
+    url: "/img/nova/share.jpg",
     width: 1200,
     height: 630,
     alt: NOVA.poster.alt,
@@ -82,7 +82,7 @@ export default function NovaPage() {
       headline: NOVA.title,
       abstract: NOVA.subtitle,
       url: URL,
-      image: `${SITE_URL}/img/nova/og.jpg`,
+      image: `${SITE_URL}/img/nova/share.jpg`,
       genre: KIND_LABEL.app,
       keywords: ["iOS app", "Voice interface", "Original", "UX design", "Case study"],
       about: { "@type": "Thing", name: "NOVA" },

@@ -50,6 +50,20 @@ export const IMAGES = {
     "color": "#f8f8f8",
     "blur": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADQAQCdASoQAAUAA4BaJYgCdAD0gcRjAAD+67EYnh5gq3DK2uDyl2lBp+bNe089SrDnMO8AEPonCHQ+AAA="
   },
+  "fintech-home/cover": {
+    "base": "/img/fintech-home/cover",
+    "width": 2400,
+    "height": 1707,
+    "widths": [
+      640,
+      800,
+      1080,
+      1600,
+      2400
+    ],
+    "color": "#f8f8f8",
+    "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADQAQCdASoQAAsAA4BaJbACdAC2dFyd0AD+8ItdHYYuP7Erspd9KqGPVLvPdBXO5tt0oTtc1Qm8HYWca7Cn80C9iOEloNmpGCMJvpfITwshoe1GAAA="
+  },
   "fintech-home/final": {
     "base": "/img/fintech-home/final",
     "width": 1600,
@@ -159,20 +173,6 @@ export const IMAGES = {
     "color": "#f8f8f8",
     "blur": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAADQAQCdASoQAAcAA4BaJZQAAp3B14a6AAD+9SCnOYuIwPfdHsIuauGUmJeXBr7gWAA="
   },
-  "fintech-home/poster": {
-    "base": "/img/fintech-home/poster",
-    "width": 2400,
-    "height": 1707,
-    "widths": [
-      640,
-      800,
-      1080,
-      1600,
-      2400
-    ],
-    "color": "#f8f8f8",
-    "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADQAQCdASoQAAsAA4BaJbACdAC2dFyd0AD+8ItdHYYuP7Erspd9KqGPVLvPdBXO5tt0oTtc1Qm8HYWca7Cn80C9iOEloNmpGCMJvpfITwshoe1GAAA="
-  },
   "fintech-home/tiles-grid": {
     "base": "/img/fintech-home/tiles-grid",
     "width": 1600,
@@ -220,6 +220,20 @@ export const IMAGES = {
     ],
     "color": "#f8f8f8",
     "blur": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAADQAQCdASoQAAYAA4BaJaQAAujGav81AAD+9z4kzSzG7jejZPmKxzHSuUnkuzo2phMAAA=="
+  },
+  "nova/cover": {
+    "base": "/img/nova/cover",
+    "width": 2400,
+    "height": 1707,
+    "widths": [
+      640,
+      800,
+      1080,
+      1600,
+      2400
+    ],
+    "color": "#f8e8f8",
+    "blur": "data:image/webp;base64,UklGRjIAAABXRUJQVlA4ICYAAAAwAQCdASoQAAsAA4BaJYwAA3AA/vLUC1+Zih+Kc+QTHbJ3iAAAAA=="
   },
   "nova/done": {
     "base": "/img/nova/done",
@@ -301,20 +315,6 @@ export const IMAGES = {
     "color": "#f8f8f8",
     "blur": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAADwAQCdASoQAAwAA4BaJaQAAvac18zsHwAA/vZDZAHLG55y76084uzRuIGKgAAA"
   },
-  "nova/poster": {
-    "base": "/img/nova/poster",
-    "width": 2400,
-    "height": 1707,
-    "widths": [
-      640,
-      800,
-      1080,
-      1600,
-      2400
-    ],
-    "color": "#f8e8f8",
-    "blur": "data:image/webp;base64,UklGRjIAAABXRUJQVlA4ICYAAAAwAQCdASoQAAsAA4BaJYwAA3AA/vLUC1+Zih+Kc+QTHbJ3iAAAAA=="
-  },
   "nova/replies": {
     "base": "/img/nova/replies",
     "width": 1720,
@@ -363,6 +363,20 @@ export const IMAGES = {
     ],
     "color": "#f8f8f8",
     "blur": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAAAQAgCdASoQAAsAA4BaJZgCdAEPDpkcXqwAAP73ElK3W2Y8nb+yl6bmKj4WVaJUMw091mkjO/ncu10sL0geDKYA"
+  },
+  "novq/cover": {
+    "base": "/img/novq/cover",
+    "width": 2400,
+    "height": 1707,
+    "widths": [
+      640,
+      800,
+      1080,
+      1600,
+      2400
+    ],
+    "color": "#f8f8f8",
+    "blur": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAACQAQCdASoQAAsAA4BaJZwAAudUwMAA/vfkTs2sMP/v7wKzxhEQAAAA"
   },
   "novq/faq": {
     "base": "/img/novq/faq",
@@ -416,20 +430,6 @@ export const IMAGES = {
     "color": "#f8f8f8",
     "blur": "data:image/webp;base64,UklGRigAAABXRUJQVlA4IBwAAAAwAQCdASoQAAgAA4BaJaQAA3AA/vThJAM/JQAA"
   },
-  "novq/poster": {
-    "base": "/img/novq/poster",
-    "width": 2400,
-    "height": 1707,
-    "widths": [
-      640,
-      800,
-      1080,
-      1600,
-      2400
-    ],
-    "color": "#f8f8f8",
-    "blur": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAACQAQCdASoQAAsAA4BaJZwAAudUwMAA/vfkTs2sMP/v7wKzxhEQAAAA"
-  },
   "novq/stats": {
     "base": "/img/novq/stats",
     "width": 2400,
@@ -456,6 +456,20 @@ export const IMAGES = {
     "color": "#181818",
     "blur": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAADQAQCdASoQAAsAA4BaJaQAAudIus6AAAD+9Ll6QLbuLZnEqdloRsjeGz2AAAAA"
   },
+  "nuvex/cover": {
+    "base": "/img/nuvex/cover",
+    "width": 2400,
+    "height": 1707,
+    "widths": [
+      640,
+      800,
+      1080,
+      1600,
+      2400
+    ],
+    "color": "#181818",
+    "blur": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAACwAQCdASoQAAsAA4BaJZwC7AEO9qOAAPl9IflprQRaAGFTXBSVAY5nLVkea6hE61TJIK2rda5AAA=="
+  },
   "nuvex/movers": {
     "base": "/img/nuvex/movers",
     "width": 2400,
@@ -468,20 +482,6 @@ export const IMAGES = {
     ],
     "color": "#181818",
     "blur": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAADwAQCdASoQAAsAA4BaJZQAAujbtSomYAAA/vRclRMZdAh5ffkKjpNvGLQfCZe9AAAAAA=="
-  },
-  "nuvex/poster": {
-    "base": "/img/nuvex/poster",
-    "width": 2400,
-    "height": 1707,
-    "widths": [
-      640,
-      800,
-      1080,
-      1600,
-      2400
-    ],
-    "color": "#181818",
-    "blur": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAACwAQCdASoQAAsAA4BaJZwC7AEO9qOAAPl9IflprQRaAGFTXBSVAY5nLVkea6hE61TJIK2rda5AAA=="
   },
   "nuvex/totals": {
     "base": "/img/nuvex/totals",
@@ -509,6 +509,20 @@ export const IMAGES = {
     "color": "#f8f8f8",
     "blur": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAADQAQCdASoQAAsAA4BaJaQAAudhPcEAAAD+9xtZ3LvKlvEYhzHdW342tx7a2SAA"
   },
+  "opsec/cover": {
+    "base": "/img/opsec/cover",
+    "width": 2400,
+    "height": 1707,
+    "widths": [
+      640,
+      800,
+      1080,
+      1600,
+      2400
+    ],
+    "color": "#f8f8f8",
+    "blur": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAAAQAgCdASoQAAsAA4BaJQBYheADE4YTbB0AAP7wflJV3GQxjcs/2QHNhyxSijUoyQvn+JgoAAA="
+  },
   "opsec/kpis": {
     "base": "/img/opsec/kpis",
     "width": 2400,
@@ -521,20 +535,6 @@ export const IMAGES = {
     ],
     "color": "#f8f8f8",
     "blur": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACwAQCdASoQAAsAA4BaJaQAAvh0z+EAAP70BPJL4FVspiBjex03mDbgAAA="
-  },
-  "opsec/poster": {
-    "base": "/img/opsec/poster",
-    "width": 2400,
-    "height": 1707,
-    "widths": [
-      640,
-      800,
-      1080,
-      1600,
-      2400
-    ],
-    "color": "#f8f8f8",
-    "blur": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAAAQAgCdASoQAAsAA4BaJQBYheADE4YTbB0AAP7wflJV3GQxjcs/2QHNhyxSijUoyQvn+JgoAAA="
   },
   "opsec/protocols": {
     "base": "/img/opsec/protocols",
@@ -575,6 +575,20 @@ export const IMAGES = {
     "color": "#f8f8f8",
     "blur": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAADQAQCdASoQAAsAA4BaJZQAAudMLiLjAAD+9+l5iDiOv/IyjppHDcqC3mAcud4kC8q/v10HAwBS0AAA"
   },
+  "rungtm/cover": {
+    "base": "/img/rungtm/cover",
+    "width": 2400,
+    "height": 1707,
+    "widths": [
+      640,
+      800,
+      1080,
+      1600,
+      2400
+    ],
+    "color": "#f8f8f8",
+    "blur": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAAAwAgCdASoQAAsAA4BaJZQBTAA+gWCYdl3oAAD+8mRwzhdX63CxZ4OYP/t5vNFgAAA="
+  },
   "rungtm/overview": {
     "base": "/img/rungtm/overview",
     "width": 2400,
@@ -587,20 +601,6 @@ export const IMAGES = {
     ],
     "color": "#f8f8f8",
     "blur": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAADQAQCdASoQAAsAA4BaJaQAAveYLuh1EAD+8mIKFvAgHZLMIduf7Tl/rxs056ziHgAAAA=="
-  },
-  "rungtm/poster": {
-    "base": "/img/rungtm/poster",
-    "width": 2400,
-    "height": 1707,
-    "widths": [
-      640,
-      800,
-      1080,
-      1600,
-      2400
-    ],
-    "color": "#f8f8f8",
-    "blur": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAAAwAgCdASoQAAsAA4BaJZQBTAA+gWCYdl3oAAD+8mRwzhdX63CxZ4OYP/t5vNFgAAA="
   },
   "see-io/after": {
     "base": "/img/see-io/after",
@@ -625,6 +625,20 @@ export const IMAGES = {
     ],
     "color": "#080818",
     "blur": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAADwAwCdASoQACAAPu1iqU2ppaQiMAgBMB2JZwAAUz5FuL4WQE/gSbAAAP7ytLlfAx7QD9FMv14t3KwWO3fYWRjPdDuqdBrwGkGb+Ycgp3SCxp2BGkVnO8aXCfpTgUp/ojNIfNZA5VCgAA=="
+  },
+  "see-io/cover": {
+    "base": "/img/see-io/cover",
+    "width": 2400,
+    "height": 1707,
+    "widths": [
+      640,
+      800,
+      1080,
+      1600,
+      2400
+    ],
+    "color": "#181818",
+    "blur": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADQAQCdASoQAAsAA4BaJYgAApPw+YDtAAD+9q+d/KwMnNpCWoc7PYhmXV1ujQFIccI8xaBq6j54xJAf/nadAAAA"
   },
   "see-io/features": {
     "base": "/img/see-io/features",
@@ -664,20 +678,6 @@ export const IMAGES = {
     ],
     "color": "#181818",
     "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADQAQCdASoQAAoAA4BaJZAAAucKtVfUQAD+9F3zrBLRtKSwXrvV5VCOe/Q4xcDbUZm4gg0UeNWxWGZ0Bbi5i/Uz18t4hWgA"
-  },
-  "see-io/poster": {
-    "base": "/img/see-io/poster",
-    "width": 2400,
-    "height": 1707,
-    "widths": [
-      640,
-      800,
-      1080,
-      1600,
-      2400
-    ],
-    "color": "#181818",
-    "blur": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADQAQCdASoQAAsAA4BaJYgAApPw+YDtAAD+9q+d/KwMnNpCWoc7PYhmXV1ujQFIccI8xaBq6j54xJAf/nadAAAA"
   },
   "see-io/pricing": {
     "base": "/img/see-io/pricing",
@@ -755,6 +755,20 @@ export const IMAGES = {
     "color": "#181818",
     "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAQCdASoQAAsAA4BaJagCdAEPDBTkwAD+0pRO2Q/H7u2XqYK7Q1/6tmWHsy9hxH0WYpFn8PWvXfjhceaxnkNJxHrCDzp1gwAAAA=="
   },
+  "takeuforward/cover": {
+    "base": "/img/takeuforward/cover",
+    "width": 2400,
+    "height": 1707,
+    "widths": [
+      640,
+      800,
+      1080,
+      1600,
+      2400
+    ],
+    "color": "#181818",
+    "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAQAgCdASoQAAsAA4BaJbACdH8AGBrlhsjIAP7zEYq6zY+c+3E4qcPmLYM4WPmZwd2xhpu9F+cQ/iQ6YmEbQ/YdFXFloR3+QEgAAA=="
+  },
   "takeuforward/founder": {
     "base": "/img/takeuforward/founder",
     "width": 2400,
@@ -780,20 +794,6 @@ export const IMAGES = {
     ],
     "color": "#181818",
     "blur": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADQAQCdASoQAAcAA4BaJQBdgCG6W3K4eAD+72kBUfPkOrEoQnmA3mL0CVtQvY8tYoZqf24Hn2pAAA=="
-  },
-  "takeuforward/poster": {
-    "base": "/img/takeuforward/poster",
-    "width": 2400,
-    "height": 1707,
-    "widths": [
-      640,
-      800,
-      1080,
-      1600,
-      2400
-    ],
-    "color": "#181818",
-    "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAQAgCdASoQAAsAA4BaJbACdH8AGBrlhsjIAP7zEYq6zY+c+3E4qcPmLYM4WPmZwd2xhpu9F+cQ/iQ6YmEbQ/YdFXFloR3+QEgAAA=="
   },
   "takeuforward/problem": {
     "base": "/img/takeuforward/problem",
@@ -897,6 +897,20 @@ export const IMAGES = {
     "color": "#f8f8f8",
     "blur": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAACwAQCdASoQAAkAA4BaJYwAAu0dTvUAAP74uYKu5RhVwBqaqeYMuh+9tTeZE98qY2I3cPDD2S/qOJyC/dMIAAAA"
   },
+  "umami/cover": {
+    "base": "/img/umami/cover",
+    "width": 2400,
+    "height": 1707,
+    "widths": [
+      640,
+      800,
+      1080,
+      1600,
+      2400
+    ],
+    "color": "#1878f8",
+    "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAQAgCdASoQAAsAA4BaJbACdLoAAgTW170AAPKc6OCNW6A1kcjcSaaPFui6MDlEv2fwoFmJ0cR8Z4JBwMVcN//FTfAobjXkL0e6kttP6H5FztCa06in6vbJ0AA="
+  },
   "umami/hero-detail": {
     "base": "/img/umami/hero-detail",
     "width": 1958,
@@ -922,20 +936,6 @@ export const IMAGES = {
     ],
     "color": "#f8f8f8",
     "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAAAwAgCdASoQAAgAA4BaJYwCdH8AGZ/TPdGQAAD+90ITTCOue2OBjsj6+krwCH46RV5FASUw0Ux6D5zOYDMztHJ0sAAAAA=="
-  },
-  "umami/poster": {
-    "base": "/img/umami/poster",
-    "width": 2400,
-    "height": 1707,
-    "widths": [
-      640,
-      800,
-      1080,
-      1600,
-      2400
-    ],
-    "color": "#1878f8",
-    "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAQAgCdASoQAAsAA4BaJbACdLoAAgTW170AAPKc6OCNW6A1kcjcSaaPFui6MDlEv2fwoFmJ0cR8Z4JBwMVcN//FTfAobjXkL0e6kttP6H5FztCa06in6vbJ0AA="
   },
   "umami/privacy": {
     "base": "/img/umami/privacy",

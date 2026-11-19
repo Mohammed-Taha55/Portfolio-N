@@ -29,7 +29,7 @@ export const FH = {
   subtitle:
     "My first fintech brief. The first version pushed the wrong button. About two days and a reviewer's seven notes later, one button clearly led.",
   poster: {
-    image: "fintech-home/poster" as ImageKey,
+    image: "fintech-home/cover" as ImageKey,
     alt: "Three stages of a fintech app's home screen on a sky-blue background: an early version with Add money as the black middle button, a dark balance card version with a blue Add money button, and the final with a white balance card, a black Add money button and a two-by-two grid of currency tiles. The client's logo is blurred.",
   },
   meta: [

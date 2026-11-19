@@ -68,7 +68,7 @@ export const metadata: Metadata = pageMeta(
   `/work/${FH.slug}`,
   `A fintech home screen, designed around one action · ${SITE_NAME}`,
   {
-    url: `/img/${FH.slug}/og.jpg`,
+    url: `/img/${FH.slug}/share.jpg`,
     width: 1200,
     height: 630,
     alt: FH.poster.alt,
@@ -110,7 +110,7 @@ export default function FintechHomePage() {
       headline: FH.title,
       abstract: FH.subtitle,
       url: URL,
-      image: `${SITE_URL}/img/${FH.slug}/og.jpg`,
+      image: `${SITE_URL}/img/${FH.slug}/share.jpg`,
       genre: KIND_LABEL.app,
       keywords: ["Fintech", "iOS app", "Client brief", "UX design", "Case study"],
       about: { "@type": "Thing", name: "A fintech home screen" },

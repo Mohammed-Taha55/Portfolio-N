@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: PageProps<"/work/[slug]">): P
     `/work/${c.slug}`,
     `${c.name}: ${KIND_LABEL[c.kind].toLowerCase()} ${ORIGIN_LABEL[c.origin].toLowerCase()} · ${SITE_NAME}`,
     {
-      url: `/img/${c.slug}/og.jpg`,
+      url: `/img/${c.slug}/share.jpg`,
       width: 1200,
       height: 630,
       alt: c.poster.alt,
@@ -145,7 +145,7 @@ export default async function CaseStudyPage({ params }: PageProps<"/work/[slug]"
       headline: c.title,
       abstract: c.summary,
       url,
-      image: `${SITE_URL}/img/${c.slug}/og.jpg`,
+      image: `${SITE_URL}/img/${c.slug}/share.jpg`,
       genre: KIND_LABEL[c.kind],
       keywords: [KIND_LABEL[c.kind], ORIGIN_LABEL[c.origin], "UX design", "UI design", "case study"],
       about: { "@type": "Thing", name: c.name },

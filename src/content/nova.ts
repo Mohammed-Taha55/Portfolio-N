@@ -35,7 +35,7 @@ export const NOVA = {
     date: "November 2026",
   },
   poster: {
-    image: "nova/poster" as ImageKey,
+    image: "nova/cover" as ImageKey,
     alt: "NOVA brand poster: a glowing pink quatrefoil mark with a white sound waveform inside it, and the NOVA wordmark below, on a soft pink gradient.",
   },
   /** The core loop in one frame, straight under the hero. */

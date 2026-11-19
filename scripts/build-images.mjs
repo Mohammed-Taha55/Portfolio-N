@@ -9,7 +9,7 @@
  * and never enter the repo or the deploy - only the outputs do:
  *
  *   public/img/<slug>/<name>-<width>.webp   responsive widths
- *   public/img/<slug>/og.jpg                1200x630 share card
+ *   public/img/<slug>/share.jpg             1200x630 share card
  *   public/avatar/dp-<width>.webp           portrait
  *   public/music/blue-poster-320.webp       album art
  *   src/content/images.generated.ts         sizes, colour, blur
@@ -85,8 +85,8 @@ const CASES = {
   "fintech-home": {
     dir: "fintech-home",
     images: [
-      // poster: the designer's own export, logo already blurred
-      { name: "poster", file: "poster.png" },
+      // cover: the designer's own export, logo already blurred
+      { name: "cover", file: "poster.png" },
       // the whole first-version 3-up, all three logos blurred
       {
         name: "first-version",
@@ -127,7 +127,7 @@ const CASES = {
   nova: {
     dir: "nova",
     images: [
-      { name: "poster", file: "poster-brand.png" },
+      { name: "cover", file: "poster-brand.png" },
       // the three screens that used to be the hero: still the first thing
       // the page shows, now that the poster is the brand mark
       { name: "screens", file: "product-01.png" },
@@ -147,7 +147,7 @@ const CASES = {
   umami: {
     dir: "umami",
     images: [
-      { name: "poster", file: "poster-brand.png" },
+      { name: "cover", file: "poster-brand.png" },
       { name: "hero-detail", file: "poster.png", crop: [0.653, 0.25, 0.34, 0.175] },
       { name: "before", file: "original-landing.png", widths: TALL },
       { name: "after", file: "landing.png", widths: TALL },
@@ -161,7 +161,7 @@ const CASES = {
   nuvex: {
     dir: "nuvex",
     images: [
-      { name: "poster", file: "poster-brand.png" },
+      { name: "cover", file: "poster-brand.png" },
       { name: "totals", file: "closeup-1.png" },
       { name: "movers", file: "closeup-3.png" },
       { name: "assets", file: "closeup-2.png" },
@@ -170,7 +170,7 @@ const CASES = {
   "see-io": {
     dir: "see.io",
     images: [
-      { name: "poster", file: "poster-brand.png" },
+      { name: "cover", file: "poster-brand.png" },
       { name: "hero-detail", file: "poster.png", crop: [0.2, 0.2, 0.6, 0.42] },
       { name: "before", file: "original-landing.png", widths: TALL },
       { name: "after", file: "landing.png", widths: TALL },
@@ -183,7 +183,7 @@ const CASES = {
   novq: {
     dir: "novq",
     images: [
-      { name: "poster", file: "poster-brand.png" },
+      { name: "cover", file: "poster-brand.png" },
       { name: "hero-detail", file: "poster.png", crop: [0.04, 0.25, 0.6, 0.45] },
       { name: "stats", file: "stats.png" },
       { name: "features", file: "features.png" },
@@ -195,7 +195,7 @@ const CASES = {
   opsec: {
     dir: "opsec",
     images: [
-      { name: "poster", file: "poster-brand.png" },
+      { name: "cover", file: "poster-brand.png" },
       { name: "kpis", file: "closeup.png" },
       { name: "protocols", file: "closeup-2.png" },
       { name: "assets", file: "closeup-3.png" },
@@ -204,7 +204,7 @@ const CASES = {
   takeuforward: {
     dir: "tuf",
     images: [
-      { name: "poster", file: "poster-brand.png" },
+      { name: "cover", file: "poster-brand.png" },
       { name: "hero-detail", file: "poster.png", crop: [0.04, 0.13, 0.52, 0.33] },
       { name: "before", file: "original-landing.png", widths: TALL },
       { name: "after", file: "landing.png", widths: TALL },
@@ -218,7 +218,7 @@ const CASES = {
   rungtm: {
     dir: "runGTM",
     images: [
-      { name: "poster", file: "poster-brand.png" },
+      { name: "cover", file: "poster-brand.png" },
       { name: "overview", file: "closeup.png" },
       { name: "attention", file: "closeup-2.png" },
       { name: "channels", file: "closeup-3.png" },
@@ -419,6 +419,10 @@ async function main() {
   }
   // `--only <slug>` rebuilds a single case study and merges it into the
   // manifest, so adding one page never touches the other six.
+  // Covers and share cards are written under new names (cover-*, share.jpg)
+  // rather than over the old poster-* / og.jpg: /img is served immutable
+  // for a year, so a file replaced in place never reaches a returning
+  // visitor. Never overwrite a published filename with different bytes.
   // `--only <slug>` rebuilds a case; `--only <slug>/<image>` rebuilds one
   // shot inside it and leaves the case's other files on disk untouched -
   // the only way to swap a poster without re-exporting everything else.
@@ -442,7 +446,7 @@ async function main() {
     }
     for (const image of todo) {
       const file = path.join(ASSETS, dir, image.file);
-      const widths = image.widths ?? (image.name === "poster" ? POSTER : WIDE);
+      const widths = image.widths ?? (image.name === "cover" ? POSTER : WIDE);
       const source = await loadSource(file, image, Math.max(...widths));
       const info = await emitResponsive(source, outDir, image.name, widths);
       manifest[`${slug}/${image.name}`] = {
@@ -453,8 +457,8 @@ async function main() {
       };
       process.stdout.write(`  ${slug}/${image.name} ${info.widths.join(",")}\n`);
     }
-    if (!onlyImage || onlyImage === "poster") {
-      await emitOg(path.join(ASSETS, dir, images[0].file), path.join(outDir, "og.jpg"));
+    if (!onlyImage || onlyImage === "cover") {
+      await emitOg(path.join(ASSETS, dir, images[0].file), path.join(outDir, "share.jpg"));
     }
   }
 
